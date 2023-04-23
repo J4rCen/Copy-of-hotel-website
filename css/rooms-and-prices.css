@@ -5,6 +5,7 @@
 
 /* start main */
 
+
 @media (max-width: 600px) {
     .demarcation-line {
         width: 8%;
@@ -223,6 +224,37 @@
 
 /* start additional-services */
 
+@media (max-width: 600px) {
+
+    .table-head{
+       display: none;
+    }
+
+    .table-body, tr {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    
+    td {
+        margin: 10px;
+    }
+}
+
+@media (min-width: 601px) {
+    .table-head > tr > th {
+        width: 100px;
+    }
+    
+    tr {
+        height: 50px;
+    }
+    
+    th, td {
+        width: 100px;
+    }
+}
+
 .additional-services {
     display: inline-block;
     width: 100%;
@@ -244,13 +276,11 @@
 }
 
 .table-head > tr > th {
-    width: 100px;
     font-weight: bold;
     background-color: var(--background-color-first);
 }
 
 tr {
-    height: 50px;
     vertical-align: middle;
 }
 
@@ -261,7 +291,6 @@ tr:nth-child(2n+1) {
 th, td {
     text-align: center;
     vertical-align: middle;
-    width: 100px;
 }
 /* end additional-services */
 /* end main */

@@ -16,9 +16,9 @@ body {
     }
 
     #header {
-        display: inline-block;
-        text-align: center;
+        position: relative;
         width: 100%;
+        text-align: center;
     }
 
     .closed {
@@ -27,8 +27,8 @@ body {
 
     #open-menu {
         position: absolute;
-        top: 5%;
-        right: 5%;
+        top: 40px;
+        right: 40px;
     }
 }
 
@@ -49,7 +49,7 @@ body {
         align-items: center;
     }
 
-    .nav-item:hover {
+    .nav-item:hover:not(.this-page) {
         border-top: 4px solid var(--main-background-color);
         background-color: rgba(0, 0, 0, 0.2);
     }
@@ -60,8 +60,10 @@ body {
 }
 
 #header {
+    clear: both;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
+    
 }
 
 #logo {
@@ -89,186 +91,150 @@ body {
     color: black;
 }
 
+.this-page {
+    color: var(--main-background-color);
+}
+
 /* end header */
 
 /* start footer */
 
 @media (max-width: 600px) {
-    #footer {
-        height: 1000px;
-        width: 100%;
-    }
-    .footer-information-area {
-        top: 5%;
-        left: 5%;
-        gap: 15px;
-        transform: translate(5%, 5%);
-        grid-template-rows:  125px 135px 250px 250px;
-        grid-template-columns: 300px;
+
+    .footer-contends {
+        grid-template-rows: 100px 150px 250px 300px;
+        justify-items: center;
     }
 }
 
 @media (min-width: 601px) {
-
-    #footer {
-        height: 300px;
-        width: 100%;
-    }
-    .footer-information-area {
-        top: 5%;
-        left: 5%;
-        gap: 15px;
-        transform: translate(5%, 5%);
-        grid-template-columns:  repeat(4, 300px);
-        grid-template-rows: 250px;
+    .footer-contends {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        margin: 50px;
     }
 }
 
 #footer {
-    position: relative;
+    display: inline-block;
+    width: 100%;
     background-color: #3E454C;
 }
 
-.footer-information-area {
+.footer-contends {
     display: grid;
-    position: absolute;
-}
-
-.about-us {
-   color: var(--second-colo-text); 
-}
-
-.about-us > p {
-    margin-top: 20px;
-    font-size: 12px;
-    line-height: 20px;
-}
-
-
-.contacts {
     color: var(--second-colo-text);
 }
 
-.contacts > p {
-    margin-top: 20px;
-    font-size: 12px;
-    line-height: 10px;
+.footer-h2-titel {
+    font-weight: bold;
+    margin-bottom: 20px;
 }
 
-.contacts > p::before {
+.footer-contends > div > p {
+    font-size: 12px;
+}
+
+.footer-contacts > p {
+    margin-bottom: 10px;
+}
+
+.footer-contacts > p::before {
     content: "";
     display: inline-block;
     height: 1em;
     width: 1em;
-    margin-right: 10px;
-    background-size: 12px 12px;
-    background-position: center;
     background-repeat: no-repeat;
+    background-size: 12px 12px;
 }
 
-.telephone::before {
+.footer-contacts-number::before {
     background-image: url("../img/main/footer/phone-call.png");
 }
 
-.address::before {
+.footer-contacts-addres::before {
     background-image: url("../img/main/footer/pin-mark.png");
 }
 
-.mail::before {
+
+.footer-contacts-email::before {
     background-image: url("../img/main/footer/email.png");
 }
 
-/* gallery */
-
-.gallery {
-    color: var(--second-colo-text);
-}
-
-.hotel-gallery {
+.footer-gallery-area {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 80px 80px 80px;
     gap: 10px;
-    height: 200px;
-    width: 100%;
-    margin-top: 10px;
 }
 
-.hotel-photo {
+.footer-gallery-img {
     position: relative;
-}
-
-.hotel-photo > img {
-    object-fit: cover;
-    height: 93px;
-    width: 93px;
-} 
-
-.photo-descriptions {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 94px;
-    font-size: 13px;
-    text-align: center;
     cursor: pointer;
 }
 
-.photo-descriptions > p {
-    margin-top: 15px;
+.footer-gallery-img > img {
+    height: 80px;
+    width: 80px;
+    object-fit: cover;
 }
 
-.hotel-photo:hover > .photo-descriptions {
-    display: inline-block;
-    background-color: rgba(0, 0, 0, 0.4);
-}
-
-/* write-to-us */
-
-.write-to-us {
-    color: white;
-}
-
-.contact-us {
-    display: flex;
+.footer-legend {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.3);
+    top: 0;
+    position: absolute;
     height: 100%;
+    width: 100%;
+}
+
+.footer-gallery-img:hover > .footer-legend {
+    display: block;
+}
+
+.footer-legend > p{
+    text-align: center;
+    font-size: 12px;
+    transform: translate(0,20%);
+    height: 100%;
+}
+
+.footer-write-to-us-input {
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
+    flex-wrap: nowrap;
 }
 
-.style-form {
-    width: 200px;
-    margin-top: 20px;
-    border: solid 1px white;
-    border-radius: 0;
+.input-style {
+    border: 1px solid var(--second-colo-text);
     background: none;
     text-decoration: none;
-    color: white;
+    color: var(--second-colo-text);
+    width: 200px;
 }
 
-.contact-us-email {
-    height: 30px;
+.footer-form-email {
+    margin-bottom: 10px;
+    height: 20px;
 }
 
-.contact-us-text {
-    cursor: text;
+.footer-form-textarea {
+    margin-bottom: 10px;
+    height: 50px;
     resize: none;
-    height: 60px;
-    white-space: pre-wrap;
-    overflow-wrap: break-word;
 }
 
-.contact-us-submit {
+.footer-form-submit {
+    font-size: 16px;
     cursor: pointer;
     color: var(--second-colo-text);
-    margin-top: 20px;
-    background: none;
     border: none;
+    background: none;
     padding: 10px;
     border-radius: 50px;
 }
 
-.contact-us-submit:hover {
-    background-color: var(--second-colo-text);
+.footer-form-submit:hover {
     color: black;
+    background-color: var(--second-colo-text);
 }
+/* end footer */
