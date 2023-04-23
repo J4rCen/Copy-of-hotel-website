@@ -1,0 +1,267 @@
+:root {
+    --background-color-first: #F0F0F0;;
+    --text-color-first: white;
+}
+
+/* start main */
+
+@media (max-width: 600px) {
+    .demarcation-line {
+        width: 8%;
+    }
+}
+
+@media (min-width: 601px) {
+    .demarcation-line {
+        width: 2%;
+    }
+}
+
+.demarcation-line {
+    background-color: var(--main-background-color);
+    height: 3px;
+    margin-bottom: 20px;
+    border: none;
+}
+
+.wrap-div {
+    height: 40px;
+    width: 40px;
+}
+
+.title-text {
+    text-align: center;
+    color: var(--main-background-color);
+    font-size: 26px;
+}
+
+
+/* start table-of-contents */
+
+.table-of-contents {
+    display: inline-block;
+    height: 150px;
+    width: 100%;
+    background-color: var(--background-color-first);   
+}
+
+/* end table-of-contents */
+
+/* start hotel-room-selection */
+
+.hotel-room-selection {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+}
+
+.content-area {
+    display: flex;
+    margin: 0px 100px 10px 100px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.room-selection {
+    text-align: center;
+    background-color: var(--background-color-first);
+    width: 350px;
+    height: max-content;
+    margin-bottom: 50px;
+}
+
+.room-preview {
+    height: 250px;
+    width: 350px;
+    object-fit: cover;
+}
+
+.room-type {
+    margin: 20px;
+}
+
+.room-information {
+    color: rgb(120, 120, 120);
+}
+
+.price {
+    display: inline-block;
+    clear: both;
+    font-weight: bold;
+}
+
+.room-descriptions {
+    margin: 20px 10px 0 10px;
+}
+
+.book-a-room {
+    display: inline-block;
+    text-decoration: none;
+    padding: 15px;
+    margin: 25px;
+    width: 50%;
+    border-radius: 50px;
+    color: var(--text-color-first);
+    background-color: black;
+    font-size: 12px;
+    
+}
+
+/* end hotel-room-selection */
+
+/* start offer-promotions */
+
+@media (max-width: 600px) {
+    .offer-promotions-title {
+        font-size: 18px;
+    }
+
+    .offer-promotions-offers {
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 601px) {
+    .offer-promotions-title {
+        font-size: 24px;
+    }
+
+    .offer-promotions-offers {
+        font-size: 16px;
+    }
+}
+
+.offer-promotions {
+    display: inline-block;
+    width: 100%;
+    background-color: var(--main-background-color);
+    color: var(--text-color-first);
+}
+
+.offer-promotions-area-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.offer-promotions-title {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 60px;
+}
+
+.offer-promotions-offers {
+    margin: 30px;
+}
+
+.offer-promotions-button {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--text-color-first);
+    border: 2px solid var(--text-color-first);
+    padding: 10px;
+    border-radius: 50px;
+    margin-bottom: 10px;
+}
+/* end offer-promotions */
+
+/* start choose-the-best-holiday */
+
+@media (max-width: 600px) {
+    .rest {
+        width: 300px;
+    }
+    
+    .rest-img {
+        width: 300px;
+        height: 150px;
+    }
+}
+
+@media (min-width: 601px) {
+    .rest {
+        width: 600px;
+    }
+    
+    .rest-img {
+        width: 600px;
+        height: 400px;
+    }
+}
+
+.choose-the-best-holiday {
+    display: inline-block;
+    width: 100%;
+}
+
+.type-of-recreation {
+    display: flex;
+    margin: 30px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.rest {
+    margin-top: 30px;
+    background-color: var(--background-color-first);
+}
+
+.rest-img {
+    object-fit: cover;
+}
+
+.rest-text {
+    text-align: center;
+    font-size: 18px;
+    margin: 30px;
+}
+
+/* end choose-the-best-holiday */
+
+/* start additional-services */
+
+.additional-services {
+    display: inline-block;
+    width: 100%;
+    background-color: var(--background-color-first);
+}
+
+.additional-services-table-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+
+.additional-services-table {
+    text-align: center;
+    margin-top: 40px;
+    width: 80%;
+}
+
+.table-head > tr > th {
+    width: 100px;
+    font-weight: bold;
+    background-color: var(--background-color-first);
+}
+
+tr {
+    height: 50px;
+    vertical-align: middle;
+}
+
+tr:nth-child(2n+1) {
+    background-color: var(--text-color-first);
+}
+
+th, td {
+    text-align: center;
+    vertical-align: middle;
+    width: 100px;
+}
+/* end additional-services */
+/* end main */
