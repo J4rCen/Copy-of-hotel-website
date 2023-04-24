@@ -1,0 +1,156 @@
+@media (max-width: 600px) {
+    .demarcation-line {
+        width: 8%;
+    }
+}
+
+@media (min-width: 601px) {
+    .demarcation-line {
+        width: 2%;
+    }
+}
+
+.demarcation-line {
+    background-color: var(--main-background-color);
+    height: 3px;
+    margin-bottom: 20px;
+    border: none;
+}
+
+.wrap-div {
+    height: 40px;
+    width: 40px;
+}
+
+.title-text {
+    text-align: center;
+    color: var(--main-background-color);
+    font-size: 26px;
+}
+
+.table-of-contents {
+    display: inline-block;
+    width: 100%;
+    background-color: var(--background-color-first);
+    padding-bottom: 20px;
+}
+
+/* start main */
+
+#main {
+    display: inline-block;
+    width: 100%;
+}
+
+.information-and-contact-with-us {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* start form-contact-us */
+
+@media (max-width: 600px) {
+    .demarcation-line {
+        width: 8%;
+    }
+
+    .form-contact-us > p {
+        font-size: 10px;
+    }
+}
+
+@media (min-width: 601px) {
+    .demarcation-line {
+        width: 2%;
+    }
+
+    .form-contact-us > p {
+        font-size: 14px;
+    }
+}
+
+.form-contact-us {
+    margin: 40px;
+}
+
+.form-contact-us > p {
+    font-weight: bold;
+}
+
+#form {
+    display: flex;
+    margin-top: 20px;
+    gap: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.input-style-main {
+    border: 1px solid silver;
+    width: 100%;
+}
+
+.input-name, .input-email, .input-tema {
+    height: 30px;
+}
+
+.input-message {
+    height: 60px;
+    resize: none;
+    line-height: 20px;
+}
+
+.input-submit {
+    padding: 10px;
+    width: 120px;
+    color: white;
+    background-color: black;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+}
+
+.input-submit:hover {
+    background-color: var(--main-background-color);
+}
+
+/* end form-contact-us */
+
+/* start information-about-us */
+
+@media (max-width: 600px) {
+    .information-about-us > h2 {
+        font-size: 14px;
+    }
+    .information-about-us > p {
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+
+    .footer-contacts {
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 601px) {
+    .information-about-us > h2 {
+        font-size: 16px;
+    }
+    .information-about-us > p {
+        font-size: 12px;
+    }
+
+    .footer-contacts {
+        font-size: 12px;
+    }
+}
+
+.information-about-us {
+    margin: 20px 40px 0 40px;
+    line-height: 30px;
+}
+
+
+
+/* end information-about-us */

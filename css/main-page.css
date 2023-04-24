@@ -12,10 +12,6 @@ body {
 
 /* start welcome-screen */
 
-#main {
-    display: inline-block;
-}
-
 @media (max-width: 600px) {
     .welcome-img {
         height: 800px;

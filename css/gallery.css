@@ -1,0 +1,83 @@
+/* start main */
+
+@media (max-width: 600px) {
+    .demarcation-line {
+        width: 8%;
+    }
+}
+
+@media (min-width: 601px) {
+    .demarcation-line {
+        width: 2%;
+    }
+}
+
+.demarcation-line {
+    background-color: var(--main-background-color);
+    height: 3px;
+    margin-bottom: 20px;
+    border: none;
+}
+
+.wrap-div {
+    height: 40px;
+    width: 40px;
+}
+
+.title-text {
+    text-align: center;
+    color: var(--main-background-color);
+    font-size: 26px;
+}
+
+.table-of-contents {
+    display: inline-block;
+    width: 100%;
+    background-color: var(--background-color-first);
+    padding-bottom: 20px;
+}
+
+.gallery {
+    display: inline-block;
+    width: 100%;
+}
+
+.gallery-area {
+    display: flex;
+    margin: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery-area-foto {
+    position: relative;
+    height: 250px;
+    width: 250px;
+    margin: 10px;
+}
+
+.img {
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+}
+
+.legend {
+    position: absolute;
+    display: none;
+    color: white;
+    height: 250px;
+    width: 250px;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.gallery-area-foto:hover > .legend {
+    display: flex;
+}
+
+/* end main */
