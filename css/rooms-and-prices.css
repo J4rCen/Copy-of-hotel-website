@@ -211,6 +211,7 @@
 }
 
 .rest-img {
+    cursor: pointer;
     object-fit: cover;
 }
 
